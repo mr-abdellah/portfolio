@@ -1,0 +1,12 @@
+export { default as Html } from '../assets/icons/html-5.svg';
+export { default as Css } from '../assets/icons/css3.svg';
+export { default as Js } from '../assets/icons/javascript.svg';
+export { default as Tailwind } from '../assets/icons/tailwindcss.svg';
+export { default as Material } from '../assets/icons/material-ui.svg';
+export { default as webpack } from '../assets/icons/webpack.svg';
+export { default as ReactIcon } from '../assets/icons/react.svg';
+export { default as Redux } from '../assets/icons/redux.svg';
+export { default as Postgres } from '../assets/icons/postgresql.svg';
+export { default as Ruby } from '../assets/icons/ruby.svg';
+export { default as Git } from '../assets/icons/git.svg';
+export { default as Github } from '../assets/icons/github.svg';

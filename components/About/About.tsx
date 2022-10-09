@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import { motion } from "framer-motion";
 import img2 from "../../assets/img2.png";
@@ -22,7 +24,7 @@ function About({}: Props) {
       </h3>
       <motion.img
         initial={{
-          x: -400,
+          x: -300,
           opacity: 0,
         }}
         whileInView={{
@@ -30,7 +32,7 @@ function About({}: Props) {
           opacity: 1,
         }}
         transition={{
-          duration: 1.2,
+          duration: 1,
         }}
         src={img2.src}
         className="-mb20 md:mb-0 flex-shrink-0 w-60 h-60 rounded-full object-cover md:rounded-lg md:w-65 h-65 xl:w-[500px] xl:h-[600px]"
@@ -42,10 +44,11 @@ function About({}: Props) {
           background
         </h4>
         <p className="text-base">
-          I started coding in January 2022, I&apos;m a junior front-end web developer
-          who loves building front-end applications & learning new technologies,
-          I love helping others how to code . When I&apos;m not coding, I&apos;ll be
-          playing video games or reading some historical books
+          I started coding in January 2022, I&apos;m a junior front-end web
+          developer who loves building front-end applications & learning new
+          technologies, I love helping others how to code . When I&apos;m not
+          coding, I&apos;ll be playing video games or reading some historical
+          books
         </p>
       </div>
     </motion.div>
