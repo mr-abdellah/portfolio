@@ -46,8 +46,6 @@ const Header = (props: Props) => {
         />
       </motion.div>
 
-      {/*  */}
-
       <motion.div
         initial={{
           x: 500,
