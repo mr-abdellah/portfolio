@@ -26,7 +26,7 @@ function About({}: Props) {
       </h3>
       <motion.div
         initial={{
-          x: -300,
+          x: 300,
           opacity: 0,
         }}
         whileInView={{
@@ -35,6 +35,9 @@ function About({}: Props) {
         }}
         transition={{
           duration: 1,
+        }}
+        viewport={{
+          once: true,
         }}
       >
         <Image

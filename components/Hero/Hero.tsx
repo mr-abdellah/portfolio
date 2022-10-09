@@ -37,7 +37,7 @@ function Hero({}: Props) {
           <Cursor cursorColor="#F7AB0A" />
         </h1>
 
-        <div className="pt-5">
+        <div className="pt-5 flex justify-center items-center gap-0">
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>
