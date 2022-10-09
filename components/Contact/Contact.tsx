@@ -20,18 +20,18 @@ function Contact({}: Props) {
   };
 
   return (
-    <div className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-center gap-12 mx-auto items-center">
-      <h3 className="absolute top-16 uppercase tracking-[20px] text-gray-500 text-2xl">
+    <div className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-center gap-6 mx-auto items-center">
+      <h3 className="absolute top-16 uppercase tracking-[20px] text-gray-500 text-xl">
         Contact
       </h3>
 
-      <div className="flex flex-col space-y-10">
-        <h4 className="text-4xl font-semibold text-center">
+      <div className="flex flex-col">
+        <h4 className="text-4xl font-semibold text-center md:space-y-10">
           I have got just what you need.{" "}
           <span className="decoration-[#F7AB0A]/50 underline">Lets Talk.</span>
         </h4>
 
-        <div className="space-y-10">
+        <div className="">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p className="text-2xl">+213556355064</p>
@@ -55,7 +55,7 @@ function Contact({}: Props) {
 
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col space-y-2 mx-auto w-full"
+        className="flex flex-col space-y-1 mx-auto w-fit"
       >
         <div className="flex space-x-2">
           <input
