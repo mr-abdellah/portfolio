@@ -1,5 +1,8 @@
+/** @format */
+
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
+import { UserPlusIcon } from "@heroicons/react/24/solid";
 
 type Props = {};
 
@@ -62,16 +65,17 @@ const Header = (props: Props) => {
         }}
         className="flex flex-row items-center text-gray-50 cursor-pointer"
       >
-        <SocialIcon
-          network="email"
-          className="cursor-pointer"
+        <a
+          className="flex items-center"
+          href="https://docs.google.com/document/d/1oX3GGd1LP3ALImlUwtwjxvw00AQH-7o-9_j7yIWfxf8/edit?usp=sharing"
           target="_blank"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
-          Get In Touch
-        </p>
+          rel="noopener noreferrer"
+        >
+          <UserPlusIcon className="w-7 mr-2" />
+          <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+            Get My Resume
+          </p>
+        </a>
       </motion.div>
     </header>
   );
