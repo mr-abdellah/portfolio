@@ -42,9 +42,9 @@ function About({}: Props) {
           background
         </h4>
         <p className="text-base">
-          I started coding in January 2022, I'm a junior front-end web developer
+          I started coding in January 2022, I&apos;m a junior front-end web developer
           who loves building front-end applications & learning new technologies,
-          I love helping others how to code . When I'm not coding, I'll be
+          I love helping others how to code . When I&apos;m not coding, I&apos;ll be
           playing video games or reading some historical books
         </p>
       </div>
