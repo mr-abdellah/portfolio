@@ -1,3 +1,5 @@
+/** @format */
+
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircle from "../BackgroundCircle/BackgroundCircle";
 import Image from "next/image";
@@ -36,19 +38,19 @@ function Hero({}: Props) {
         </h1>
 
         <div className="pt-5">
-          <Link href='#about'>
+          <Link href="#about">
             <button className="heroButton">About</button>
           </Link>
 
-          <Link href='#experience'>
+          <Link href="#experience">
             <button className="heroButton">Experience</button>
           </Link>
 
-          <Link href='skills'>
+          <Link href="#skills">
             <button className="heroButton">Skills</button>
           </Link>
 
-          <Link href='projects'>
+          <Link href="#projects">
             <button className="heroButton">Projects</button>
           </Link>
         </div>
