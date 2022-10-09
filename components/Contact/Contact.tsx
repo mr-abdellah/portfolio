@@ -26,7 +26,7 @@ function Contact({}: Props) {
       </h3>
 
       <div className="flex flex-col gap-2">
-        <h4 className="text-4xl font-semibold text-center md:space-y-10 mb-5">
+        <h4 className="text-3xl font-semibold text-center md:space-y-10 mb-5">
           I have got just what you need.{" "}
           <span className="decoration-[#F7AB0A]/50 underline">Lets Talk.</span>
         </h4>
@@ -34,21 +34,21 @@ function Contact({}: Props) {
         <div className="">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">+213556355064</p>
+            <p className="text-xl font-semibold">+213556355064</p>
           </div>
         </div>
 
         <div className="">
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">belkaid.abdulah@gmail.com</p>
+            <p className="text-xl font-semibold">belkaid.abdulah@gmail.com</p>
           </div>
         </div>
 
         <div className="">
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">Algiers/Algeria</p>
+            <p className="text-xl font-semibold">Algiers/Algeria</p>
           </div>
         </div>
       </div>
