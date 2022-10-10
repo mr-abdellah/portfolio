@@ -2,9 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import img2 from "../../assets/img2.png";
-import Image from "next/image";
-
+import img2 from "../../assets/img2.jpg";
 type Props = {};
 
 function About({}: Props) {
@@ -24,9 +22,9 @@ function About({}: Props) {
       <h3 className="absolute top-20 uppercase tracking-[20px] text-gray-500 text-2xl">
         About
       </h3>
-      <motion.div
+      <motion.img
         initial={{
-          x: 300,
+          x: -300,
           opacity: 0,
         }}
         whileInView={{
@@ -36,18 +34,9 @@ function About({}: Props) {
         transition={{
           duration: 1,
         }}
-        viewport={{
-          once: true,
-        }}
-      >
-        <Image
-          src={img2}
-          className="-mb20 md:mb-0 flex-shrink-0 w-20 h-20 rounded-full object-cover md:rounded-lg md:w-35 h-35 xl:w-[500px] xl:h-[600px]"
-          width="200px"
-          height="200px"
-          alt="my image"
-        />
-      </motion.div>
+        src={img2.src}
+        className="-mb20 md:mb-0 flex-shrink-0 w-40 h-40 rounded-full object-cover md:rounded-lg md:w-65 h-65 xl:w-[500px] xl:h-[600px]"
+      />
       <div className="space-y-6 px-0 md:px-10">
         <h4 className="text-4xl font-semibold">
           Here is a{" "}

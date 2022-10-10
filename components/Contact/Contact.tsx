@@ -21,7 +21,7 @@ function Contact({}: Props) {
 
   return (
     <div className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-center gap-6 mx-auto items-center">
-      <h3 className="absolute top-16 uppercase tracking-[20px] text-gray-500 text-xl">
+      <h3 className="absolute top-20 uppercase tracking-[20px] text-gray-500 text-xl">
         Contact
       </h3>
 
