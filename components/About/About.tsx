@@ -19,15 +19,15 @@ function About({}: Props) {
       }}
       className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-center gap-2 mx-auto items-center"
     >
-      <h3 className="absolute top-20 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-xl">
         About
       </h3>
       <motion.img
         initial={{
-          x: -300,
           opacity: 0,
+          x: -300,
         }}
-        whileInView={{
+        animate={{
           x: 0,
           opacity: 1,
         }}
@@ -44,11 +44,10 @@ function About({}: Props) {
           background
         </h4>
         <p className="text-base">
-          I started coding in January 2022, I&apos;m a junior front-end web
-          developer who loves building front-end applications & learning new
-          technologies, I love helping others how to code . When I&apos;m not
-          coding, I&apos;ll be playing video games or reading some historical
-          books
+          I started coding in January 2022, I&apos;m a junior full stack web
+          developer who loves building applications & learning new technologies,
+          I love helping others learning how to code . When I&apos;m not coding,
+          I&apos;ll be playing video games or reading some historical books
         </p>
       </div>
     </motion.div>
