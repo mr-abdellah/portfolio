@@ -1,9 +1,10 @@
-/** @format */
-
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
-import project1Img from "/assets/projects/tourrico.png";
+import TurricoImg from "/assets/projects/tourrico.png";
+import LinkedInImg from "/assets/projects/linkedIn.png";
+import { SocialIcon } from "react-social-icons";
+import { EyeIcon } from "@heroicons/react/24/solid";
 
 type Props = {};
 
@@ -13,7 +14,7 @@ function Projects({}: Props) {
       title: "Turrico",
       description:
         "Turrico is a web app for a tour aggency , it help people to find the best places in the world to discover and visit",
-      img: project1Img,
+      img: TurricoImg,
       technologies: [
         "React Js",
         "Redux",
@@ -23,51 +24,27 @@ function Projects({}: Props) {
         "React Router",
         "Firebase Auth",
       ],
+      github: "https://github.com/mr-abdellah/Tour-landing-page",
+      live: "https://tourrico.netlify.app/",
     },
     {
-      title: "Turrico",
+      title: "LinkedIn Clone",
       description:
-        "Turrico is a web app for a tour aggency , it help people to find the best places in the world to discover and visit",
-      img: project1Img,
+        "A LinkedIn clone , you can login / logout and sign up with email and password, share a post and see your profile with your posts",
+      img: LinkedInImg,
       technologies: [
-        "React Js",
+        "Next Js",
+        "Typescript",
         "Redux",
         "Css",
         "Material Ui",
-        "React Icons",
         "React Router",
         "Firebase Auth",
-      ],
-    },
-    {
-      title: "Turrico",
-      description:
-        "Turrico is a web app for a tour aggency , it help people to find the best places in the world to discover and visit",
-      img: project1Img,
-      technologies: [
-        "React Js",
-        "Redux",
-        "Css",
-        "Material Ui",
         "React Icons",
-        "React Router",
-        "Firebase Auth",
+        "React Social Icons",
       ],
-    },
-    {
-      title: "Turrico",
-      description:
-        "Turrico is a web app for a tour aggency , it help people to find the best places in the world to discover and visit",
-      img: project1Img,
-      technologies: [
-        "React Js",
-        "Redux",
-        "Css",
-        "Material Ui",
-        "React Icons",
-        "React Router",
-        "Firebase Auth",
-      ],
+      github: "https://github.com/mr-abdellah/linkedIn",
+      live: "https://linkedin-mr-abdellah.netlify.app/",
     },
   ];
 
@@ -112,7 +89,7 @@ function Projects({}: Props) {
             >
               <Image
                 src={project.img.src}
-                width="300px"
+                width="400px"
                 height="250px"
                 alt=""
               />
@@ -124,10 +101,35 @@ function Projects({}: Props) {
                 </span>
                 {project.title}
               </h4>
-
-              <p className="text-lg text-center md:text-left">
+              <p className="text-sm text-center md:text-left">
                 {project.description}
               </p>
+              <h4>Used technologies :</h4>
+              <div className="flex flex-wrap gap-x-3 justify-start w-full">
+                {project.technologies.map((tech, index) => (
+                  <>
+                    <p className="w-[30%] whitespace-nowrap">- {tech}</p>
+                  </>
+                ))}
+              </div>
+              <div className="flex items-center justify-between w-full">
+                <a
+                  className="w-[50%]"
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  - Source Code
+                </a>
+                <a
+                  className="w-[50%]"
+                  href={project.live}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  - Live demo
+                </a>
+              </div>
             </div>
           </div>
         ))}

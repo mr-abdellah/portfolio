@@ -1,5 +1,3 @@
-/** @format */
-
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import { UserPlusIcon } from "@heroicons/react/24/solid";
