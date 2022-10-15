@@ -104,8 +104,8 @@ function Projects({}: Props) {
               <p className="text-sm mx-auto w-[80%] text-center md:text-left">
                 {project.description}
               </p>
-              <h4 className="mx-auto w-[90%]">Used technologies :</h4>
-              <div className=" mx-auto w-[90%] flex flex-wrap gap-x-3 justify-start">
+              <h4 className="mx-auto w-[80%]">Used technologies :</h4>
+              <div className=" mx-auto w-[80%] flex flex-wrap gap-x-3 justify-start">
                 {project.technologies.map((tech, index) => (
                   <>
                     <p
@@ -117,7 +117,7 @@ function Projects({}: Props) {
                   </>
                 ))}
               </div>
-              <div className="flex items-center justify-between mx-auto w-[90%]">
+              <div className="flex items-center justify-between mx-auto w-[80%]">
                 <a
                   className="w-[40%]"
                   href={project.github}
