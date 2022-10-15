@@ -71,14 +71,12 @@ function Projects({}: Props) {
             key={index}
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
           >
-            <motion.div
+            <motion.img
               initial={{
-                y: -300,
                 opacity: 0,
               }}
               whileInView={{
                 opacity: 1,
-                y: 0,
               }}
               transition={{
                 duration: 1.5,
@@ -86,14 +84,9 @@ function Projects({}: Props) {
               viewport={{
                 once: true,
               }}
-            >
-              <Image
-                src={project.img.src}
-                width="300px"
-                height="250px"
-                alt=""
-              />
-            </motion.div>
+              className="w-[300px] md:mt-16"
+              src={project.img.src}
+            />
             <div className="space-y-4 w-screen px-0 md:px-5 max-w-6xl">
               <h4 className="text-2xl whitespace-nowrap font-semibold text-center">
                 <span className="underline decoration-[#F7AB0A]/50 whitespace-pre-line">
@@ -101,16 +94,18 @@ function Projects({}: Props) {
                 </span>
                 {project.title}
               </h4>
-              <p className="text-sm mx-auto w-[80%] text-center md:text-left">
+              <p className="text-sm mx-auto w-[80%] text-center md:font-semibold md:text-xl">
                 {project.description}
               </p>
-              <h4 className="mx-auto w-[80%]">Used technologies :</h4>
+              <h4 className="mx-auto w-[80%] md:font-semibold md:text-xl">
+                Used technologies :
+              </h4>
               <div className=" mx-auto w-[80%] flex flex-wrap gap-x-3 justify-start">
                 {project.technologies.map((tech, index) => (
                   <>
                     <p
                       key={index}
-                      className="w-[30%] whitespace-nowrap text-sm"
+                      className="w-[30%] whitespace-nowrap text-sm md:font-semibold md:text-lg"
                     >
                       - {tech}
                     </p>
@@ -119,7 +114,7 @@ function Projects({}: Props) {
               </div>
               <div className="flex items-center justify-between mx-auto w-[80%]">
                 <a
-                  className="w-[40%]"
+                  className="w-[40%] md:text-lg"
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
@@ -127,7 +122,7 @@ function Projects({}: Props) {
                   - Source Code
                 </a>
                 <a
-                  className="w-[40%]"
+                  className="w-[40%] md:text-lg"
                   href={project.live}
                   target="_blank"
                   rel="noreferrer"
