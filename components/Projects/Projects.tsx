@@ -89,32 +89,37 @@ function Projects({}: Props) {
             >
               <Image
                 src={project.img.src}
-                width="400px"
+                width="300px"
                 height="250px"
                 alt=""
               />
             </motion.div>
-            <div className="space-y-4 px-0 md:px-5 max-w-6xl">
+            <div className="space-y-4 w-screen px-0 md:px-5 max-w-6xl">
               <h4 className="text-2xl whitespace-nowrap font-semibold text-center">
-                <span className="underline decoration-[#F7AB0A]/50">
+                <span className="underline decoration-[#F7AB0A]/50 whitespace-pre-line">
                   Case Study {index + 1} of {projects.length} :{" "}
                 </span>
                 {project.title}
               </h4>
-              <p className="text-sm text-center md:text-left">
+              <p className="text-sm mx-auto w-[80%] text-center md:text-left">
                 {project.description}
               </p>
-              <h4>Used technologies :</h4>
-              <div className="flex flex-wrap gap-x-3 justify-start w-full">
+              <h4 className="mx-auto w-[90%]">Used technologies :</h4>
+              <div className=" mx-auto w-[90%] flex flex-wrap gap-x-3 justify-start">
                 {project.technologies.map((tech, index) => (
                   <>
-                    <p className="w-[30%] whitespace-nowrap">- {tech}</p>
+                    <p
+                      key={index}
+                      className="w-[30%] whitespace-nowrap text-sm"
+                    >
+                      - {tech}
+                    </p>
                   </>
                 ))}
               </div>
-              <div className="flex items-center justify-between w-full">
+              <div className="flex items-center justify-between mx-auto w-[90%]">
                 <a
-                  className="w-[50%]"
+                  className="w-[40%]"
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
@@ -122,7 +127,7 @@ function Projects({}: Props) {
                   - Source Code
                 </a>
                 <a
-                  className="w-[50%]"
+                  className="w-[40%]"
                   href={project.live}
                   target="_blank"
                   rel="noreferrer"
