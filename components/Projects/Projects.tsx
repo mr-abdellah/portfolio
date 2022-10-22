@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import TurricoImg from "/assets/projects/tourrico.png";
 import LinkedInImg from "/assets/projects/linkedIn.png";
+import FindtrendImg from "/assets/projects/findtrend.png";
 import { SocialIcon } from "react-social-icons";
 import { EyeIcon } from "@heroicons/react/24/solid";
 
@@ -45,6 +46,15 @@ function Projects({}: Props) {
       ],
       github: "https://github.com/mr-abdellah/linkedIn",
       live: "https://linkedin-mr-abdellah.netlify.app/",
+    },
+    {
+      title: "Findtrend",
+      description:
+        "Findtrend helps you to increase your productivity and reduce your computer's memory load, an application that can fulfill your daily browsing needs.",
+      img: FindtrendImg,
+      technologies: ["React Js", "Css", "React Social Icons"],
+      github: "https://github.com/mr-abdellah/fintrend",
+      live: "https://fintrend.netlify.app/",
     },
   ];
 
@@ -114,7 +124,7 @@ function Projects({}: Props) {
               </div>
               <div className="flex items-center justify-between mx-auto w-[80%]">
                 <a
-                  className="w-[40%] md:text-lg"
+                  className="px-3 py-2 border rounded-full uppercase text-xs tracking-widest transition-all border-[#F7AB0A]/40 text-[#F7AB0A] hover:bg-[#F7AB0A]/10 hover:border-[#F7AB0A] md:text-lg"
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
@@ -122,7 +132,7 @@ function Projects({}: Props) {
                   - Source Code
                 </a>
                 <a
-                  className="w-[40%] md:text-lg"
+                  className="px-3 py-2 border rounded-full uppercase text-xs tracking-widest transition-all border-[#F7AB0A]/40 text-[#F7AB0A] hover:bg-[#F7AB0A]/10 hover:border-[#F7AB0A] md:text-lg"
                   href={project.live}
                   target="_blank"
                   rel="noreferrer"
