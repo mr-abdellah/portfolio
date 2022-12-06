@@ -1,0 +1,62 @@
+/** @format */
+
+import { Cursor, useTypewriter } from "react-simple-typewriter";
+import BackgroundCircle from "../BackgroundCircle/BackgroundCircle";
+import Image from "next/image";
+import myPic from "../../assets/img.png";
+import Link from "next/link";
+
+type Props = {};
+
+function Hero({}: Props) {
+  const [text, count] = useTypewriter({
+    words: [
+      "Hi, My Name's Abdellah Belkaid",
+      "A Guy-who-loves-video-games.tsx",
+      "<ButLovesToCodeMore/>",
+    ],
+    loop: true,
+    delaySpeed: 2000,
+  });
+  return (
+    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+      <BackgroundCircle />
+      <Image
+        className="relative rounded-full h-10 w-10 mx-auto object-cover"
+        height="140px"
+        width="140px"
+        src={myPic}
+        alt="myPic"
+      />
+      <div className="z-20">
+        <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
+          Full-Stack Web Developer
+        </h2>
+        <h1 className="text-3xl lg:text-5xl font-semibold px-10">
+          <span className="mr-3">{text}</span>
+          <Cursor cursorColor="#F7AB0A" />
+        </h1>
+
+        <div className="pt-5 flex justify-center items-center gap-0">
+          <Link href="#about">
+            <button className="heroButton">About</button>
+          </Link>
+
+          <Link href="#experience">
+            <button className="heroButton">Experience</button>
+          </Link>
+
+          <Link href="#skills">
+            <button className="heroButton">Skills</button>
+          </Link>
+
+          <Link href="#projects">
+            <button className="heroButton">Projects</button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Hero;
