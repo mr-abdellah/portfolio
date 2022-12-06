@@ -52,9 +52,18 @@ function Projects({}: Props) {
       description:
         "Findtrend helps you to increase your productivity and reduce your computer's memory load, an application that can fulfill your daily browsing needs.",
       img: FindtrendImg,
-      technologies: ["React Js", "Css", "React Social Icons"],
+      technologies: ["React Js", "Tailwind Css", "React Icons"],
       github: "https://github.com/mr-abdellah/fintrend",
       live: "https://fintrend.netlify.app/",
+    },
+    {
+      title: "Portfolio",
+      description:
+        "Portfolio website for a photographer & designer that show his projects and work , and to help him reach more people",
+      img: FindtrendImg,
+      technologies: ["React Js", "Css", "React Social Icons", "Framer Motion"],
+      github: "#",
+      live: "https://younes-portfolio.vercel.app/",
     },
   ];
 
@@ -123,14 +132,26 @@ function Projects({}: Props) {
                 ))}
               </div>
               <div className="flex items-center justify-between mx-auto w-[80%]">
-                <a
-                  className="px-3 py-2 border rounded-full uppercase text-xs tracking-widest transition-all border-[#F7AB0A]/40 text-[#F7AB0A] hover:bg-[#F7AB0A]/10 hover:border-[#F7AB0A] md:text-lg"
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  - Source Code
-                </a>
+                {project.github === "#" ? (
+                  <a
+                    className="px-3 py-2 border rounded-full uppercase text-xs tracking-widest transition-all border-[#F7AB0A]/40 text-[#F7AB0A]  md:text-lg"
+                    // href={project.github}
+
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    - No Source code
+                  </a>
+                ) : (
+                  <a
+                    className="px-3 py-2 border rounded-full uppercase text-xs tracking-widest transition-all border-[#F7AB0A]/40 text-[#F7AB0A] hover:bg-[#F7AB0A]/10 hover:border-[#F7AB0A] md:text-lg"
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    - Source Code
+                  </a>
+                )}
                 <a
                   className="px-3 py-2 border rounded-full uppercase text-xs tracking-widest transition-all border-[#F7AB0A]/40 text-[#F7AB0A] hover:bg-[#F7AB0A]/10 hover:border-[#F7AB0A] md:text-lg"
                   href={project.live}
